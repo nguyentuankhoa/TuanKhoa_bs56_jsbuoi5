@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>jsbuoi5</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+ 
+<!-- bài tập 1  -->
+<div class="container" style="margin-bottom: 100px;">
+  <h1>Bài tập quản lí tuyển sinh</h1>
+  <div class="mb-2">
+    <label for="" class="form-label"></label>
+    <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="diemChuan" placeholder="Điểm chuẩn">
+  </div>
+  <div class="mb-2">
+    <label for="" class="form-label"></label>
+    <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="mon1" placeholder="điểm môn thứ nhất ">
+  </div>
+  <div class="mb-2">
+    <label for="" class="form-label"></label>
+    <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="mon2" placeholder="điểm môn thứ hai">
+  </div>
+  <div class="mb-2">
+    <label for="" class="form-label"></label>
+    <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="mon3" placeholder="điểm môn thứ 3">
+  </div>
+  <div class="form-group">
+    <label for="" class="form-label">Chọn khu vực</label>
+    <select name="" id="chonKhucVuc" >
+        <option value=""></option>
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="" class="form-label">Chọn đối tượng</label>
+    <select name="" id="chonDoiTuong">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+</div>
+    <button class="btn btn-info" id="btnKetQua" onclick="quanLiTuyenSinh()">Kết Quả</button>
+    <div class="alert alert-dark mb-2 w-25" id="ketQuaBai1"></div>
+  </div>
+
+  <!-- bài tập 2  -->
+
+  <div class="container" style="margin-bottom: 100px;">
+    <h1>Bài tập tính tiền điện</h1>
+    <div class="mb-2">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="hoVaTen" placeholder="Họ Tên">
+    </div>
+    <div class="mb-2">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="nhapSoKw" placeholder="Số kw">
+    </div>
+    <button class="btn btn-info" id="btnTienDien"onclick="soTienDien()">Tính Tiền Điện</button>
+    <div class="alert alert-dark mb-2 w-25" id="ketQuaBai2"></div>
+  </div>
+  
+
+  <!-- bài tập 3  -->
+  <div class="container" style="margin-bottom: 100px;">
+    <h1>Bài tập tính tiền thuế thu nhập cá nhân</h1>
+    <div class="mb-2">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="hoTen" placeholder="Họ Tên">
+    </div>
+    <div class="mb-2">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="thuNhap" placeholder="Thu nhập">
+    </div>
+    <div class="mb-2">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control mb-2 w-25" aria-describedby="emailHelpId" id="soNguoi" placeholder="Số người phụ thuộc">
+    </div>
+    <button class="btn btn-info" id="btnTienThue"onclick="tinhTienThue()">Tính tiền thuế thu nhập</button>
+    <div class="alert alert-dark mb-2 w-25" id="ketQuaBai3"></div>
+  </div>
+
+
+  <!-- bài tập 4  -->
+  <div class="container" style="margin-bottom: 100px;">
+    <h1>Bài tập 4: tính tiền cáp</h1>
+    <div class="mp3 ">
+      <label for="" class="form-label">Chọn loại khách hàng</label>
+      <select name="" id="chonKhach" onchange="doanhNghiep()">
+          <option value="nhaDan">Nhà dân</option>
+          <option value="doanhNghiep">Doanh nghiệp</option>
+      </select>
+  </div>
+  <br>
+  <div class="mb-3 ">
+      <label for="" class="form-label"> </label>
+      <input type="text" class="form-control " name="" id="soKetNoi" aria-describedby="emailHelpId"
+          placeholder="số kết nối">
+  </div>
+  <br>
+  <div class="mb-3">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control" name="" id="maKH" aria-describedby="emailHelpId"
+          placeholder="mã khách hàng">
+  </div>
+  <div class="mb-3">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control" name="" id="soKenh" aria-describedby="emailHelpId"
+          placeholder="số kênh cao cấp">
+  </div>
+  <br>
+  <button class="btn btn-info" id="tinhTienCap" onclick="tinhTienCapQuang()">Tính tiền cáp</button>
+  <br>
+  <div  class="alert alert-dark mb-2 w-25" id="hienThiTienCap">
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
