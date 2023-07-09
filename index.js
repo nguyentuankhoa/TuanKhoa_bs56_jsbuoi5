@@ -23,9 +23,9 @@ function quanLiTuyenSinh() {
   var diemMon3 = document.getElementById("mon3").value * 1;
   var diemTong = diemMon1 + diemMon2 + diemMon3;
 
-  var diemUuTien = khuVuc + doiTuong;
-  var tongKet = diemTong + diemUuTien;
-  if (diemTong >= diemTieuChuan) {
+  var diemUuTien = (khuVuc + doiTuong)*1;
+  var tongKet = diemTong + diemUuTien ;
+  if (tongKet >= diemChuan && diemMon1 >0 && diemMon2 >0 && diemMon3 >0 ) {
     document.getElementById("ketQuaBai1").innerHTML =
       "Đậu rồi nhé : " + "số điểm = " + tongKet;
   } else {
